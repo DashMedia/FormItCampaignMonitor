@@ -26,11 +26,11 @@ $api_key = $modx->getOption('formitcampaignmonitor.api_key');
 $default_smart_email_id = $modx->getOption('formitcampaignmonitor.default_smart_email_id');
 $smart_email_id = $modx->getOption('cmSmartEmailId', $hook->formit->config, $default_smart_email_id);
 
-$emailTo = $modx->getOption('emailTo', $hook->formit->config, '', true);
-$subject = $modx->getOption('emailSubject', $hook->formit->config, '', true);
+$emailTo = $modx->getOption('emailTo', $hook->formit->config, null, true);
+$subject = $modx->getOption('emailSubject', $hook->formit->config, null, true);
 $emailToName = $modx->getOption('emailToName', $hook->formit->config, $emailTo, true);
-$replyTo = $modx->getOption('emailReplyTo', $hook->formit->config, '');
-$replyToName = $modx->getOption('emailReplyToName', $hook->formit->config, '');
+$replyTo = $modx->getOption('emailReplyTo', $hook->formit->config, null);
+$replyToName = $modx->getOption('emailReplyToName', $hook->formit->config, null);
 
 
 if ($formFields) {
@@ -168,6 +168,8 @@ if(!empty($attachments)){
 
 if(!empty($replyTo)){
   $message['Data']['replyToEmail'] = $replyTo;
+} elseif (!empty($dataArray['Email'])) {
+  $message['Data']['replyToEmail'] = $message['Data']['Email'];
 }
 if(!empty($replyToName)){
   $message['Data']['replyToName'] = $replyToName;  

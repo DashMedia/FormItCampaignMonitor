@@ -19,10 +19,6 @@ include_once $core_path .'/vendor/autoload.php';
 
 $values = $hook->getValues();
 
-// formFields is set by formalicious
-$formFields = $modx->getOption('formFields', $formit->config, false);
-$cmSubscribeListId['Text'] = $modx->getOption('cmSubscribeListId', $hook->formit->config, '');
-
 $api_key = $modx->getOption('formitcampaignmonitor.api_key');
 $default_list_id = $modx->getOption('formitcampaignmonitor.default_list_id');
 $list_id = $modx->getOption('cmSubscribeListId', $hook->formit->config, $default_list_id);

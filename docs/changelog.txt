@@ -1,5 +1,13 @@
 Changelog for FormItCampaignMonitor
 
+FormItCampaignMonitor 1.1.3
+---------------------------------
+Remove unneeded vars from top of cmSubscribe
+
+FormItCampaignMonitor 1.1.2
+---------------------------------
+Fall back to `Email` when no replyToEmail` provided
+
 FormItCampaignMonitor 1.0.0
 ---------------------------------
 Initial Version
