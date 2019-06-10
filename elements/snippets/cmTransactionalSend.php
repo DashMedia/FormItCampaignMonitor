@@ -23,6 +23,7 @@ $values = $hook->getValues();
 $formFields = $modx->getOption('formFields', $formit->config, false);
 
 $api_key = $modx->getOption('formitcampaignmonitor.api_key');
+$max_upload = $modx->getOption('formitcampaignmonitor.max_upload');
 $default_smart_email_id = $modx->getOption('formitcampaignmonitor.default_smart_email_id');
 $smart_email_id = $modx->getOption('cmSmartEmailId', $hook->formit->config, $default_smart_email_id);
 
@@ -74,10 +75,17 @@ $data = array(
 );
 $attachments = array();
 foreach ($dataArray as $field => $value) {
+  $original_name = $field;
   $field = ucfirst(str_replace('_',' ',$field));
   if(is_array($value)){
     if(isset($value['tmp_name'])){
       // file
+      if(filesize($value['tmp_name']) > $max_upload){
+        $human_size = human_filesize($max_upload);
+        $modx->setPlaceholder('fi.validation_error_message', "Uploaded file larger than {$human_size} limit");
+        $hook->addError($original_name, "File size must be under {$human_size}");
+        return false;
+      }
       switch ($value['error']) {
             case UPLOAD_ERR_OK:
                 $message = 'See attached - ' . $value['name'];
@@ -188,3 +196,9 @@ if($result->response[0]->Status != 'Accepted'){
 }
 
 return true;
+
+function human_filesize($bytes, $decimals = 2) {
+  $size = array('B','kB','MB','GB','TB','PB','EB','ZB','YB');
+  $factor = floor((strlen($bytes) - 1) / 3);
+  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$size[$factor];
+}
