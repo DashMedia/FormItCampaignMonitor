@@ -77,7 +77,7 @@ class CM_API{
 			//no custom field values to deal with
 			return false;
 		}
-		foreach($this->custom_fields as $key => &$value){
+		foreach((array) $this->custom_fields as $key => &$value){
 			// iterate through fields, making sure they exist, and that the value is a viable option.
 			foreach ($existing_custom_fields as $fieldId => $field) {
 				if($value['FieldName'] === $field->FieldName){

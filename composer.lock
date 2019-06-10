@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f52ea56798e74b72d940d4341c5bc896",
+    "content-hash": "bc63ffda89fddcb882324f7123578594",
     "packages": [
         {
             "name": "campaignmonitor/createsend-php",
-            "version": "5.1.2",
+            "version": "v5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/campaignmonitor/createsend-php.git",
-                "reference": "dafaff661d651f41b959022ae7dce4f703fb7541"
+                "reference": "bf0709839c634e22ee8f30a508e49db5b0921c80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/campaignmonitor/createsend-php/zipball/dafaff661d651f41b959022ae7dce4f703fb7541",
-                "reference": "dafaff661d651f41b959022ae7dce4f703fb7541",
+                "url": "https://api.github.com/repos/campaignmonitor/createsend-php/zipball/bf0709839c634e22ee8f30a508e49db5b0921c80",
+                "reference": "bf0709839c634e22ee8f30a508e49db5b0921c80",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "campaign",
                 "monitor"
             ],
-            "time": "2017-05-15T05:59:55+00:00"
+            "time": "2018-04-20T23:24:11+00:00"
         }
     ],
     "packages-dev": [],
