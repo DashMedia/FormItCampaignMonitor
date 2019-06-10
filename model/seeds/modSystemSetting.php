@@ -26,6 +26,13 @@ return array(
       'xtype'         =>     'textfield',
       'namespace' => 'formitcampaignmonitor',
       'area'      => 'formitcampaignmonitor:default'
+    ),
+    array(
+      'key'       =>     'formitcampaignmonitor.max_upload',
+      'value'         =>     '5242880',
+      'xtype'         =>     'textfield',
+      'namespace' => 'formitcampaignmonitor',
+      'area'      => 'formitcampaignmonitor:default'
   )
 );
 /*EOF*/

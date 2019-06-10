@@ -18,7 +18,7 @@
  * Query; if not, write to the Free Software Foundation, Inc., 59 Temple
  * Place, Suite 330, Boston, MA 02111-1307 USA
  *
- * @package yourpackage
+ * @package FormItCampaignMonitor
  */
 
 /**
@@ -31,8 +31,9 @@
  * @var $modx modX
  * @var $scriptProperties array
  *
- * @package goldentemplate
+ * @package FormItCampaignMonitor
  **/
 
-// $_lang['setting_goldentemplate.color'] = 'Custom Color';
-// $_lang['setting_goldentemplate.color_desc'] = 'A valid hex code';
+
+$_lang['setting_formitcampaignmonitor.max_upload'] = 'Maximum file upload size';
+$_lang['setting_formitcampaignmonitor.max_upload_desc'] = 'in bytes, eg "5242880"';

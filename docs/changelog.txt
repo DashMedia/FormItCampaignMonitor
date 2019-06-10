@@ -1,13 +1,21 @@
-Changelog for FormItCampaignMonitor
+# Changelog for FormItCampaignMonitor
 
-FormItCampaignMonitor 1.1.3
----------------------------------
-Remove unneeded vars from top of cmSubscribe
+## FormItCampaignMonitor 1.1.5-pl
 
-FormItCampaignMonitor 1.1.2
----------------------------------
-Fall back to `Email` when no replyToEmail` provided
+* BUG FIX: Casting the custom-feilds variable into an array in CM_API in case it's empty or not valid the loop doesnot process it
 
-FormItCampaignMonitor 1.0.0
----------------------------------
-Initial Version
+## FormItCampaignMonitor 1.1.4-pl
+
+* Add max_filesize checks
+
+## FormItCampaignMonitor 1.1.3-pl
+
+* Remove unneeded vars from top of cmSubscribe
+
+## FormItCampaignMonitor 1.1.2-pl
+
+* Fall back to `Email` when no replyToEmail` provided
+
+## FormItCampaignMonitor 1.0.0-pl
+
+* Initial Version
